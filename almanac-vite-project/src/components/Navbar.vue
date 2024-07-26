@@ -1,17 +1,21 @@
 <script setup>
-import { ref } from "vue";
 import { RouterLink } from "vue-router";
+// if using default options
+import { vScrollReveal } from 'vue-scroll-reveal';
 </script>
 
 <template>
-  <div class="flex justify-center align-middle w-full gap-5 h-16 fixed border">
+  <div class="flex flex-col justify-center align-middle gap-5 border">
+    <RouterLink v-scroll-reveal.reset="{delay: 2000}"
+      to="/about"
+      >About</RouterLink>
     <RouterLink
       to="/about"
       >About</RouterLink>
     <RouterLink
       to="/"
       >Contact</RouterLink>
-    <RouterLink
+    <RouterLink v-scroll-reveal.reset
       to="/about"
       >About</RouterLink>
   </div>
